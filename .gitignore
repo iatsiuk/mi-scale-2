@@ -1,0 +1,29 @@
+# Binary
+/miscale
+/bin/
+
+# Test coverage
+coverage.out
+
+# GoReleaser output
+/dist/
+
+# Vendor directory
+vendor/
+
+# Reverse engineering inputs and outputs (third-party APK, large)
+/apk/
+/decompiled/
+/decompiled2/
+/res-out/
+/docs/analysis/
+/tools/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store

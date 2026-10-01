@@ -1,0 +1,29 @@
+# miscale
+
+macOS CLI for the Xiaomi Mi Body Composition Scale 2 (XMTZC05HM). Reproduces Zepp Life 6.16.1 scale features locally: live weighing, body composition (bit-exact port of libBodyfat.so), offline history sync, family members, guest, infant and balance modes, scale settings.
+
+## Installation
+
+```bash
+make build
+```
+
+## Quick Usage
+
+```bash
+miscale user add --name me --sex m --birth 1987-04 --height 181 --weight 97
+miscale sync    # once: registers the history key, offline records are kept from then on
+miscale measure
+miscale sync
+miscale history
+miscale -f json show 1
+miscale scale info
+```
+
+## Output
+
+Markdown tables by default, JSON with `-f json`. Progress and prompts go to stderr.
+
+## Data
+
+`~/Library/Application Support/miscale/data.json`, override with `--data` or `MISCALE_DATA`.
